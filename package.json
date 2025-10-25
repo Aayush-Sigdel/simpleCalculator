@@ -1,0 +1,90 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "A Simple Calculator.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder -w",
+        "build:win": "electron-builder --win nsis",
+        "build:mac": "electron-builder --mac dmg zip",
+        "build:linux": "electron-builder --linux AppImage deb",
+        "build:linux:zip": "electron-builder --linux zip",
+        "build:all": "electron-builder -mwl",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aayush-Sigdel/QrScanner.git"
+    },
+    "keywords": [],
+    "author": "Aayush-Sigdel",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Aayush-Sigdel/QrScanner/issues"
+    },
+    "homepage": "https://github.com/Aayush-Sigdel/QrScanner#readme",
+    "devDependencies": {
+        "electron": "^38.2.2",
+        "electron-reload": "^2.0.0-alpha.1",
+        "electron-builder": "^25.1.8"
+    },
+    "build": {
+        "appId": "com.calculator.ASimpleCalculator",
+        "productName": "A Simple Calculator",
+        "asar": true,
+        "publish": [],
+        "files": [
+            "main.js",
+            "src/**/*",
+            "components/**/*",
+            "assets/**/*",
+            "package.json"
+        ],
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "artifactName": "${productName}-Windows-${version}-Setup.${ext}",
+            "icon": "assets/images/Logo.png"
+        },
+        "mac": {
+            "target": [
+                "dmg",
+                "zip"
+            ],
+            "category": "public.app-category.utilities",
+            "artifactName": "${productName}-macOS-${version}.${ext}",
+            "icon": "assets/images/Logo.png"
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": false,
+            "allowElevation": true,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "A Simple Calculator"
+        },
+        "dmg": {
+            "backgroundColor": "#2f2f2f",
+            "iconSize": 128
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ],
+            "category": "Tool",
+            "maintainer": "Aayush Sigdel",
+            "artifactName": "${productName}-Linux-${version}.${ext}",
+            "icon": "assets/images/Logo.png"
+        }
+    }
+}
