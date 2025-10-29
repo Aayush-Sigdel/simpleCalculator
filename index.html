@@ -5,93 +5,182 @@
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
-        <title>A Simple Calculator</title>
+        <title>Croakulator</title>
         <link
             rel="stylesheet"
             href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+            rel="stylesheet" />
     </head>
     <body>
-        <div class="main" >
-            <a style="position: absolute; top: 35px; left: 35px;" href="https://www.github.com/Aayush-Sigdel" target="_blank"> 
-            <img src="output-onlinegiftools.gif"  alt="Calculator GIF" id="frog">
+        <div class="main">
+            <a
+                style="position: absolute; top: 35px; left: 35px"
+                href="https://www.github.com/Aayush-Sigdel"
+                target="_blank">
+                <img
+                    src="output-onlinegiftools.gif"
+                    alt="Calculator GIF"
+                    id="frog" />
             </a>
             <div class="output-screen-main">
                 <div class="output-inner-screen">
-                    <span class="output-text-span" id="output-text-span"></span> 
+                    <span
+                        class="output-text-span"
+                        id="output-text-span"></span>
                     <input
                         type="text"
                         id="output-text"
                         autocomplete="off"
                         value=""
-                        autofocus="true"
-                        />
-
-                        
+                        autofocus="true" />
                 </div>
             </div>
             <div class="key-button-main">
                 <div class="button button-special">
-                    <button id="delete" value="Delete"><img src="Vector.png" alt="Delete" /></button>
+                    <button
+                        id="delete"
+                        value="Delete">
+                        <img
+                            src="Vector.png"
+                            alt="Delete" />
+                    </button>
                 </div>
                 <div class="button button-special">
-                    <button id="clear" value="AC">AC</button>
+                    <button
+                        id="clear"
+                        value="AC">
+                        AC
+                    </button>
                 </div>
                 <div class="button button-special">
-                    <button id="modulus" value="%">%</button>
+                    <button
+                        id="modulus"
+                        value="%">
+                        %
+                    </button>
                 </div>
                 <div class="button button-symbol">
-                    <button id="divide" value="/">/</button>
+                    <button
+                        id="divide"
+                        value="/">
+                        /
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="seven" value="7">7</button>
+                    <button
+                        id="seven"
+                        value="7">
+                        7
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="eight" value="8">8</button>
+                    <button
+                        id="eight"
+                        value="8">
+                        8
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="nine" value="9">9</button>
+                    <button
+                        id="nine"
+                        value="9">
+                        9
+                    </button>
                 </div>
                 <div class="button button-symbol">
-                    <button id="multiply" value="*">*</button>
+                    <button
+                        id="multiply"
+                        value="*">
+                        *
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="four" value="4">4</button>
+                    <button
+                        id="four"
+                        value="4">
+                        4
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="five" value="5">5</button>
+                    <button
+                        id="five"
+                        value="5">
+                        5
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="six" value="6">6</button>
+                    <button
+                        id="six"
+                        value="6">
+                        6
+                    </button>
                 </div>
                 <div class="button button-symbol">
-                    <button id="minus" value="-">-</button>
+                    <button
+                        id="minus"
+                        value="-">
+                        -
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="one" value="1">1</button>
+                    <button
+                        id="one"
+                        value="1">
+                        1
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="two" value="2">2</button>
+                    <button
+                        id="two"
+                        value="2">
+                        2
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="three" value="3">3</button>
+                    <button
+                        id="three"
+                        value="3">
+                        3
+                    </button>
                 </div>
                 <div class="button button-symbol">
-                    <button id="plus" value="+">+</button>
+                    <button
+                        id="plus"
+                        value="+">
+                        +
+                    </button>
                 </div>
                 <div class="button button-long">
-                    <button id="zero" value="0">0</button>
+                    <button
+                        id="zero"
+                        value="0">
+                        0
+                    </button>
                 </div>
                 <div class="button">
-                    <button id="decimal" value=".">.</button>
+                    <button
+                        id="decimal"
+                        value=".">
+                        .
+                    </button>
                 </div>
                 <div class="button button-symbol">
-                    <button id="equals" value="=">=</button>
+                    <button
+                        id="equals"
+                        value="=">
+                        =
+                    </button>
+                </div>
             </div>
-        </div>
         </div>
         <script src="script.js"></script>
     </body>

@@ -18,7 +18,12 @@
         "type": "git",
         "url": "git+https://github.com/Aayush-Sigdel/simpleCalculator.git"
     },
-    "keywords": ["calculator", "electron", "desktop-app", "croakulator"],
+    "keywords": [
+        "calculator",
+        "electron",
+        "desktop-app",
+        "croakulator"
+    ],
     "author": "Aayush-Sigdel",
     "license": "ISC",
     "type": "commonjs",
@@ -37,11 +42,10 @@
         "asar": true,
         "publish": [],
         "files": [
-            "main.js",
-            "src/**/*",
-            "components/**/*",
-            "assets/**/*",
-            "package.json"
+            "**/*",
+            "!node_modules",
+            "!dist",
+            "!.git"
         ],
         "win": {
             "target": [

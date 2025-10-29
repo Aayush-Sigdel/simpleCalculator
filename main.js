@@ -2,10 +2,8 @@ const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 app.disableHardwareAcceleration(); // Linux GPU fix
-app.setName('Qraft');
-app.setAppUserModelId('com.qraft.qrscanner');
-
-console.log(path.join(__dirname, 'url.html'));
+app.setName('Croakulator');
+app.setAppUserModelId('com.calculator.croakulator');
 
 // Hot reload for development (optional)
 try {
@@ -35,7 +33,7 @@ function createWindow() {
         maxWidth: 370,
         resizable: false,
         autoHideMenuBar: true, // hide menu bar (Alt will not toggle after we remove menu below)
-        icon: path.join(__dirname, 'assets/images/Logo.png'),
+        icon: path.join(__dirname, 'icon.png'),
         webPreferences: {
             nodeIntegration: true, // allow Node.js in renderer
             contextIsolation: false,
