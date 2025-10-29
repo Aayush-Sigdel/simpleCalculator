@@ -27,10 +27,13 @@ try {
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 1920,
-        height: 1080,
-        minWidth: 1300,
-        minHeight: 800,
+        width: 370,
+        height: 520,
+        minWidth: 370,
+        minHeight: 520,
+        maxHeight: 520,
+        maxWidth: 370,
+        resizable: false,
         autoHideMenuBar: true, // hide menu bar (Alt will not toggle after we remove menu below)
         icon: path.join(__dirname, 'assets/images/Logo.png'),
         webPreferences: {
