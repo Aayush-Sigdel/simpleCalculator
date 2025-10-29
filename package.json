@@ -1,38 +1,39 @@
 {
-    "name": "calculator",
+    "name": "croakulator",
     "version": "1.0.0",
-    "description": "A Simple Calculator.",
+    "description": "A Simple Calculator - Croakulator.",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
         "build": "electron-builder -w",
         "build:win": "electron-builder --win nsis",
         "build:mac": "electron-builder --mac dmg zip",
-        "build:linux": "electron-builder --linux AppImage deb",
+        "build:linux": "electron-builder --linux AppImage deb pacman",
         "build:linux:zip": "electron-builder --linux zip",
+        "build:arch": "electron-builder --linux pacman",
         "build:all": "electron-builder -mwl",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Aayush-Sigdel/QrScanner.git"
+        "url": "git+https://github.com/Aayush-Sigdel/simpleCalculator.git"
     },
-    "keywords": [],
+    "keywords": ["calculator", "electron", "desktop-app", "croakulator"],
     "author": "Aayush-Sigdel",
     "license": "ISC",
     "type": "commonjs",
     "bugs": {
-        "url": "https://github.com/Aayush-Sigdel/QrScanner/issues"
+        "url": "https://github.com/Aayush-Sigdel/simpleCalculator/issues"
     },
-    "homepage": "https://github.com/Aayush-Sigdel/QrScanner#readme",
+    "homepage": "https://github.com/Aayush-Sigdel/simpleCalculator#readme",
     "devDependencies": {
         "electron": "^38.2.2",
         "electron-reload": "^2.0.0-alpha.1",
         "electron-builder": "^25.1.8"
     },
     "build": {
-        "appId": "com.calculator.ASimpleCalculator",
-        "productName": "A Simple Calculator",
+        "appId": "com.calculator.croakulator",
+        "productName": "Croakulator",
         "asar": true,
         "publish": [],
         "files": [
@@ -52,7 +53,7 @@
                 }
             ],
             "artifactName": "${productName}-Windows-${version}-Setup.${ext}",
-            "icon": "assets/images/Logo.png"
+            "icon": "icon.png"
         },
         "mac": {
             "target": [
@@ -61,7 +62,7 @@
             ],
             "category": "public.app-category.utilities",
             "artifactName": "${productName}-macOS-${version}.${ext}",
-            "icon": "assets/images/Logo.png"
+            "icon": "icon.png"
         },
         "nsis": {
             "oneClick": false,
@@ -70,7 +71,7 @@
             "allowToChangeInstallationDirectory": true,
             "createDesktopShortcut": true,
             "createStartMenuShortcut": true,
-            "shortcutName": "A Simple Calculator"
+            "shortcutName": "Croakulator"
         },
         "dmg": {
             "backgroundColor": "#2f2f2f",
@@ -79,12 +80,22 @@
         "linux": {
             "target": [
                 "AppImage",
-                "deb"
+                "deb",
+                "pacman"
             ],
-            "category": "Tool",
+            "category": "Calculator",
             "maintainer": "Aayush Sigdel",
             "artifactName": "${productName}-Linux-${version}.${ext}",
-            "icon": "assets/images/Logo.png"
+            "icon": "icon.png"
+        },
+        "pacman": {
+            "packageCategory": "Office",
+            "synopsis": "A Simple Calculator - Croakulator",
+            "depends": [
+                "gtk3",
+                "libxss",
+                "gconf"
+            ]
         }
     }
 }
