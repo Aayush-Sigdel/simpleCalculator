@@ -14,12 +14,17 @@ body {
     border-radius: 10px;
 }
 
-.output-screen-main{
+.output-screen-main {
     background: linear-gradient(180deg, #85AC8E, #618D6A);
     border-radius: 10px;
     width: 319px;
     height: 82px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40), 0 7px 13px -3px rgba(0, 0, 0, 0.30), -3px -3px 0 0 rgba(0, 0, 0, 0.20) inset;
+    transition: box-shadow 0.3s ease;
+}
+
+.output-screen-main:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.50), 0 10px 16px -3px rgba(0, 0, 0, 0.40), -3px -3px 0 0 rgba(0, 0, 0, 0.30) inset;
 }
 
 .output-inner-screen{
@@ -72,9 +77,19 @@ body {
     column-gap: 10px;
     grid-template-rows: repeat(5, minmax(0, 2fr));
     grid-template-columns: repeat(4, minmax(0, 2fr));
+    animation: fadeInUp 0.6s ease-out;
 }
 
-
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .button button {
     color: #000;
@@ -88,23 +103,50 @@ body {
     padding: 15.5px 0;
     max-width: 140px;
     max-height: 55px;
-justify-content: center;
-align-items: center;
-aspect-ratio: 1/1;
-justify-self: center;
-border-radius: 20px;
-background: #ECCEAE;
-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40), 0 7px 13px -3px rgba(0, 0, 0, 0.30), -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    justify-self: center;
+    border-radius: 20px;
+    background: #ECCEAE;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40), 0 7px 13px -3px rgba(0, 0, 0, 0.30), -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translateY(0);
+}
+
+.button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 10px 16px -3px rgba(0, 0, 0, 0.40), -3px -3px 0 0 rgba(0, 0, 0, 0.60) inset;
+    background: #F0D2B2;
+}
+
+.button button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 3px 6px -3px rgba(0, 0, 0, 0.20), -2px -2px 0 0 rgba(0, 0, 0, 0.40) inset;
 }
 
 .button-special button{
-background: #FBF6E2;
-box-shadow: -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
-filter: drop-shadow(0 7px 13px rgba(0, 0, 0, 0.30)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.40));
+    background: #FBF6E2;
+    box-shadow: -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
+    filter: drop-shadow(0 7px 13px rgba(0, 0, 0, 0.30)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.40));
+    transition: all 0.2s ease;
+}
+
+.button-special button:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.40)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.50));
+}
+
+.button-special button:active {
+    transform: translateY(1px);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.20)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.30));
 }
 
 .button-symbol button{
-    position: absolute;
+    position: relative;
     font-family: "Londrina Solid", sans-serif;
     font-weight: 900;
     font-size: 40px;
@@ -112,15 +154,45 @@ filter: drop-shadow(0 7px 13px rgba(0, 0, 0, 0.30)) drop-shadow(0 2px 4px rgba(0
     vertical-align: text-top;
     text-align: center;
     line-height: 40px;
-border-radius: 20px;
-background: #E68369;
-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40), 0 7px 13px -3px rgba(0, 0, 0, 0.30), -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
+    border-radius: 20px;
+    background: #E68369;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40), 0 7px 13px -3px rgba(0, 0, 0, 0.30), -3px -3px 0 0 rgba(0, 0, 0, 0.50) inset;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.button-symbol button:hover {
+    background: #ED8F77;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 10px 16px -3px rgba(0, 0, 0, 0.40), -3px -3px 0 0 rgba(0, 0, 0, 0.60) inset;
+}
+
+.button-symbol button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 3px 6px -3px rgba(0, 0, 0, 0.20), -2px -2px 0 0 rgba(0, 0, 0, 0.40) inset;
 }
 
 .button-long {
     grid-column: 1 / span 2;
-    }
+}
+
 .button-long button {
     width: 130px;
     height: 55px;
+    transition: all 0.2s ease;
+}
+
+.button-long button:hover {
+    transform: translateY(-2px);
+    background: #F0D2B2;
+}
+
+.button-long button:active {
+    transform: translateY(1px);
+}
+
+/* Add focus styles for accessibility */
+.button button:focus {
+    outline: 2px solid #85AC8E;
+    outline-offset: 2px;
 }
